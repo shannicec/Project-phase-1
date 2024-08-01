@@ -30,22 +30,22 @@ of clothing items and trends, allowing them to mix and match pieces to create th
 
 
 #### **API and Data**
+
+
 1. API: Unsplash API
-Endpoint: https://api.unsplash.com/search/photos
 
 
 
-
-3. data structure:
-  #### **Items**
+2. data structure:
+   #### **Items**
   
-  Includes ID, name, image, description, and category.
+    Includes ID, name, image, description, and category.
 
     
 
-  #### **Trends**
+   #### **Trends**
   
-  Includes trendName and Description.
+    Includes trendName and Description.
 
     
 
