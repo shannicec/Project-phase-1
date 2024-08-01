@@ -37,12 +37,14 @@ of clothing items and trends, allowing them to mix and match pieces to create th
 
 2. data structure:
   #### **Items**
-     -Includes ID, name, image, description, and category.
+  
+  Includes ID, name, image, description, and category.
 
     
 
   #### **Trends**
-     -Includes trendName and Description.
+  
+  Includes trendName and Description.
 
     
 
@@ -58,11 +60,13 @@ of clothing items and trends, allowing them to mix and match pieces to create th
 
   
    #### **Outfit selection**
-        - It provides a section where users can view their selected items.
+  
+- It provides a section where users can view their selected items.
   
 
-   #### **Image Display** 
-        - It shows a grid of fashion images based on the search query.
+   #### **Image Display**
+  
+- It shows a grid of fashion images based on the search query.
 
 
 
