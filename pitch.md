@@ -56,17 +56,18 @@ of clothing items and trends, allowing them to mix and match pieces to create th
 #### **Basic User Interface**
 
 1. #### **Search bar**
-- It allows users to input keywords to search for fashion Images.
+   
+    - It allows users to input keywords to search for fashion Images.
 
   
    #### **Outfit selection**
   
-- It provides a section where users can view their selected items.
+    - It provides a section where users can view their selected items.
   
 
    #### **Image Display**
   
-- It shows a grid of fashion images based on the search query.
+    - It shows a grid of fashion images based on the search query.
 
 
 
@@ -79,14 +80,18 @@ of clothing items and trends, allowing them to mix and match pieces to create th
    - Search results
         It will display images in a grid layout with a brief description.
 
----
-
-#### **Outfit Display**
 
 
-1. Removing Items: It will allow users to remove items from their selected outfits.
+3. #### **Outfit Display**
 
-2. Selected Items Section: It will display the Images of the selected items in a separate section showing the user's current outfit choices.
+
+   Removing Items
+ 
+     - It will allow users to remove items from their selected outfits.
+
+   Selected Items Section
+ 
+     - It will display the Images of the selected items in a separate section showing the user's current outfit choices.
 
 
 ---
