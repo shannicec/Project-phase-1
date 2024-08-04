@@ -14,6 +14,9 @@ searchButton.addEventListener('click', () => {
 async function fetchImages(query) {
   try {
     const response = await fetch(`${https://api.unsplash.com/search/photos}?query=${cuteoutfits2024}&client_id=${6tkiYVWM7P6o5QyMujyycn9Rjf5zCvFxTxBmiItACkA}`);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
     const data = await response.json();
     displayImages(data.results);
   } catch (error) {
