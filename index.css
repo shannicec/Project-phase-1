@@ -1,54 +1,85 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #ffcccb; 
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-header {
-  background-color: #de3163;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
-input[type="text"] {
-  padding: 0.5rem;
-  margin-right: 0.5rem;
-  border: none;
-  border-radius: 5px;
+#searchBar {
+    border: 1px solid #D32F2F; 
+    background-color: #FFEBEE; 
+    padding: 8px;
+    font-size: 16px;
+    margin: 10px;
 }
 
 button {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #ff69b4; 
-  color: white;
-  cursor: pointer;
+    background-color: #D32F2F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
 }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 1rem;
+button:hover {
+    background-color: #B71C1C; 
 }
 
-.grid img {
-  max-width: 100%;
-  border-radius: 10px;
-  cursor: pointer;
+#imageGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#yourOutfit {
-  margin-top: 2rem;
-  padding: 1rem;
-  background-color: #fff; /* White */
-  border-radius: 10px;
+#imageGrid img {
+    border: 2px solid #D32F2F; 
+    margin: 5px;
+    width: 150px;
+    height: auto;
+    cursor: pointer;
 }
 
-h2 {
-  margin-top: 0;
+#selectedItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#selectedItems img {
+    border: 2px solid #FFEBEE;
+    margin: 5px;
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+}
+
+#trends {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.trend {
+    background-color: #FFEBEE; 
+    border: 2px solid #D32F2F;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.trend h3 {
+    color: #D32F2F; 
+}
+
+.trend p {
+    color: #333;
 }
