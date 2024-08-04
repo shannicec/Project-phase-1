@@ -1,6 +1,5 @@
-console.log('JavaScript file is loaded');
 const ACCESS_KEY = '6tkiYVWM7P6o5QyMujyycn9Rjf5zCvFxTxBmiItACkA'; 
-const API_URL = 'https://api.unsplash.com/search/photos';
+const API_URL = 'https://unsplash.com/oauth/applications/640353';
 
 const searchBar = document.getElementById('searchBar');
 const searchButton = document.getElementById('searchButton');
@@ -14,18 +13,8 @@ searchButton.addEventListener('click', () => {
 
 async function fetchImages(query) {
   try {
-    const url = `${https://api.unsplash.com/search/photos}?query=${cuteoutfits}&client_id=${6tkiYVWM7P6o5QyMujyycn9Rjf5zCvFxTxBmiItACkA}`;
-    console.log(`Fetching from URL: ${url}`);
-    
-    const response = await fetch(url);
-
- if (!response.ok) {
-      throw new Error('Network response was not ok: ' + response.statusText);
-    }
-    
+    const response = await fetch(`${https://unsplash.com/oauth/applications/640353}?query=${query}&client_id=${6tkiYVWM7P6o5QyMujyycn9Rjf5zCvFxTxBmiItACkA}`);
     const data = await response.json();
-    console.log('Fetched data:', data); // Debugging data
-    
     displayImages(data.results);
   } catch (error) {
     console.error('Error fetching images:', error);
@@ -33,11 +22,11 @@ async function fetchImages(query) {
 }
 
 function displayImages(images) {
-  imageGrid.innerHTML = ''; 
+  imageGrid.innerHTML = ''; // Clear previous images
   images.forEach(image => {
     const imgElement = document.createElement('img');
     imgElement.src = image.urls.small;
-    imgElement.alt = image.alt_description || 'Image description'; // Fallback text
+    imgElement.alt = image.alt_description;
     imgElement.addEventListener('click', () => addToOutfit(image));
     imageGrid.appendChild(imgElement);
   });
@@ -46,7 +35,7 @@ function displayImages(images) {
 function addToOutfit(image) {
   const imgElement = document.createElement('img');
   imgElement.src = image.urls.small;
-  imgElement.alt = image.alt_description || 'Image description'; // Fallback text
+  imgElement.alt = image.alt_description;
   imgElement.addEventListener('click', () => removeFromOutfit(imgElement));
   selectedItems.appendChild(imgElement);
 }
@@ -54,7 +43,6 @@ function addToOutfit(image) {
 function removeFromOutfit(imgElement) {
   selectedItems.removeChild(imgElement);
 }
-
 const categories = ['tops', 'bottoms', 'accessories'];
 const trends = [
   { trendName: 'Street Style', description: 'Casual and comfortable everyday outfits.' },
@@ -70,3 +58,5 @@ function getItemsByTrend(trendName) {
 
 console.log('Available Categories:', categories);
 console.log('Current Trends:', trends);
+console.log('JavaScript file is loaded');
+
