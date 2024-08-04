@@ -7,13 +7,12 @@ const imageGrid = document.getElementById('imageGrid');
 const selectedItems = document.getElementById('selectedItems');
 
 searchButton.addEventListener('click', () => {
-  const query = searchBar.value; // Get user input
-  fetchImages(query); // Pass the query to fetchImages function
+  const query = searchBar.value; 
+  fetchImages(query); 
 });
 
 async function fetchImages(query) {
   try {
-    // Use the query variable in the API URL
     const response = await fetch(`${API_URL}?query=${encodeURIComponent(query)}&client_id=${ACCESS_KEY}`);
     const data = await response.json();
     displayImages(data.results);
