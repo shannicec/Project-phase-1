@@ -7,13 +7,14 @@ const imageGrid = document.getElementById('imageGrid');
 const selectedItems = document.getElementById('selectedItems');
 
 searchButton.addEventListener('click', () => {
-  const query = searchBar.value;
-  fetchImages(query);
+  const query = searchBar.value; // Get user input
+  fetchImages(query); // Pass the query to fetchImages function
 });
 
 async function fetchImages(query) {
   try {
-    const response = await fetch(`${https://api.unsplash.com/search/photos}?query=${cuteoutfits}&client_id=${6tkiYVWM7P6o5QyMujyycn9Rjf5zCvFxTxBmiItACkA}`);
+    // Use the query variable in the API URL
+    const response = await fetch(`${API_URL}?query=${encodeURIComponent(query)}&client_id=${ACCESS_KEY}`);
     const data = await response.json();
     displayImages(data.results);
   } catch (error) {
@@ -43,6 +44,7 @@ function addToOutfit(image) {
 function removeFromOutfit(imgElement) {
   selectedItems.removeChild(imgElement);
 }
+
 const categories = ['tops', 'bottoms', 'accessories'];
 const trends = [
   { trendName: 'Street Style', description: 'Casual and comfortable everyday outfits.' },
@@ -52,9 +54,10 @@ const trends = [
 
 function getItemsByCategory(category) {
 }
+
 function getItemsByTrend(trendName) {
 }
+
 console.log('Available Categories:', categories);
 console.log('Current Trends:', trends);
 console.log('JavaScript file is loaded');
-
