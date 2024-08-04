@@ -3,21 +3,21 @@
     {
       "id": 1,
       "name": "Stylish Jacket",
-      "image": "https://example.com/images/jacket.jpg",
+      "image": "https://unsplash.com/s/photos/trendy-jacket",
       "description": "A trendy jacket for all occasions.",
       "category": "tops"
     },
     {
       "id": 2,
       "name": "Classic Jeans",
-      "image": "https://example.com/images/jeans.jpg",
+      "image": "https://unsplash.com/s/photos/comfortable-jeans",
       "description": "Comfortable and classic jeans.",
       "category": "bottoms"
     },
     {
       "id": 3,
       "name": "Elegant Scarf",
-      "image": "https://example.com/images/scarf.jpg",
+      "image": "https://unsplash.com/s/photos/scarf",
       "description": "An elegant scarf to complement your outfit.",
       "category": "accessories"
     }
