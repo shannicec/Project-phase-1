@@ -1,5 +1,5 @@
 const ACCESS_KEY = '6tkiYVWM7P6o5QyMujyycn9Rjf5zCvFxTxBmiItACkA'; 
-const API_URL = 'https://unsplash.com/oauth/applications/640353';
+const API_URL = 'https://api.unsplash.com/search/photos';
 
 const searchBar = document.getElementById('searchBar');
 const searchButton = document.getElementById('searchButton');
@@ -13,7 +13,7 @@ searchButton.addEventListener('click', () => {
 
 async function fetchImages(query) {
   try {
-    const response = await fetch(`${https://unsplash.com/oauth/applications/640353}?query=${query}&client_id=${6tkiYVWM7P6o5QyMujyycn9Rjf5zCvFxTxBmiItACkA}`);
+    const response = await fetch(`${https://api.unsplash.com/search/photos}?query=${query}&client_id=${6tkiYVWM7P6o5QyMujyycn9Rjf5zCvFxTxBmiItACkA}`);
     const data = await response.json();
     displayImages(data.results);
   } catch (error) {
@@ -22,7 +22,7 @@ async function fetchImages(query) {
 }
 
 function displayImages(images) {
-  imageGrid.innerHTML = ''; // Clear previous images
+  imageGrid.innerHTML = ''; 
   images.forEach(image => {
     const imgElement = document.createElement('img');
     imgElement.src = image.urls.small;
@@ -52,10 +52,8 @@ const trends = [
 
 function getItemsByCategory(category) {
 }
-
 function getItemsByTrend(trendName) {
 }
-
 console.log('Available Categories:', categories);
 console.log('Current Trends:', trends);
 console.log('JavaScript file is loaded');
