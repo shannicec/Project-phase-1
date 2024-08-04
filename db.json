@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Stylish Jacket",
+      "image": "https://example.com/images/jacket.jpg",
+      "description": "A trendy jacket for all occasions.",
+      "category": "tops"
+    },
+    {
+      "id": 2,
+      "name": "Classic Jeans",
+      "image": "https://example.com/images/jeans.jpg",
+      "description": "Comfortable and classic jeans.",
+      "category": "bottoms"
+    },
+    {
+      "id": 3,
+      "name": "Elegant Scarf",
+      "image": "https://example.com/images/scarf.jpg",
+      "description": "An elegant scarf to complement your outfit.",
+      "category": "accessories"
+    }
+  ],
+  "trends": [
+    {
+      "trendName": "Street Style",
+      "description": "Casual and comfortable everyday outfits."
+    },
+    {
+      "trendName": "Bohemian",
+      "description": "Free-spirited and artistic styles."
+    },
+    {
+      "trendName": "Minimalist",
+      "description": "Simple and clean designs with a focus on essentials."
+    }
+  ]
+}
