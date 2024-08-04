@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fashion Mixer</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Mixer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Fashion Mixer</h1>
-    <input type="text" id="searchBar" placeholder="Search for fashion items...">
+    <input type="text" id="searchBar" placeholder="Search for outfits">
     <button id="searchButton">Search</button>
-  </header>
+    <div id="imageGrid"></div>
+    <div id="selectedItems"></div>
+    
+    <!-- New section for trends -->
+    <div id="trends">
+        <div class="trend">
+            <h3>Street Style</h3>
+            <p>Casual and comfortable everyday outfits that often feature sneakers, jeans, and trendy tops.</p>
+        </div>
+        <div class="trend">
+            <h3>Bohemian</h3>
+            <p>Free-spirited and artistic styles that include flowy dresses, ethnic prints, and lots of accessories.</p>
+        </div>
+        <div class="trend">
+            <h3>Minimalist</h3>
+            <p>Simple and clean designs with a focus on essentials, often featuring neutral colors and streamlined silhouettes.</p>
+        </div>
+    </div>
 
-  <main>
-    <section id="imageGrid" class="grid">
-    </section>
-
-    <section id="yourOutfit">
-      <h2>Your Outfit</h2>
-      <div id="selectedItems" class="grid">
-      </div>
-    </section>
-  </main>
-
-  <script src="scripts.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
 <link rel="stylesheet" href="index.css">
