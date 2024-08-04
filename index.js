@@ -1,4 +1,4 @@
-const ACCESS_KEY = '6tkiYVWM7P6o5QyMujyycn9Rjf5zCvFxTxBmiItACkA'; 
+const ACCESS_KEY = 'cDZNa8MwbJvAT4gJpBjwMswxo2dpc2Q4yEUIo5R30wg'; 
 const API_URL = 'https://api.unsplash.com/search/photos';
 
 const searchBar = document.getElementById('searchBar');
