@@ -1,3 +1,4 @@
+console.log('JavaScript file is loaded');
 const ACCESS_KEY = '6tkiYVWM7P6o5QyMujyycn9Rjf5zCvFxTxBmiItACkA'; 
 const API_URL = 'https://api.unsplash.com/search/photos';
 
