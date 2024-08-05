@@ -1,17 +1,17 @@
-const ACCESS_KEY = 'cDZNa8MwbJvAT4gJpBjwMswxo2dpc2Q4yEUIo5R30wg'; 
-const API_URL = 'https://api.unsplash.com/search/photos';
-
 const searchBar = document.getElementById('searchBar');
 const searchButton = document.getElementById('searchButton');
 const imageGrid = document.getElementById('imageGrid');
 const selectedItems = document.getElementById('selectedItems');
 
 searchButton.addEventListener('click', () => {
-  const query = searchBar.value; 
-  fetchImages(query); 
+  const query = searchBar.value;
+  fetchImages(query);
 });
 
 async function fetchImages(query) {
+  const ACCESS_KEY = 'cDZNa8MwbJvAT4gJpBjwMswxo2dpc2Q4yEUIo5R30wg';
+  const API_URL = 'https://api.unsplash.com/search/photos';
+  
   try {
     const response = await fetch(`${API_URL}?query=${encodeURIComponent(query)}&client_id=${ACCESS_KEY}`);
     const data = await response.json();
@@ -50,13 +50,6 @@ const trends = [
   { trendName: 'Bohemian', description: 'Free-spirited and artistic styles.' },
   { trendName: 'Minimalist', description: 'Simple and clean designs with a focus on essentials.' }
 ];
-
-function getItemsByCategory(category) {
-}
-
-function getItemsByTrend(trendName) {
-}
-
 console.log('Available Categories:', categories);
 console.log('Current Trends:', trends);
 console.log('JavaScript file is loaded');
