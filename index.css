@@ -61,10 +61,10 @@ main {
 }
 
 #image-gallery img, #suggestions img, #selected-items img {
-  width: 100px;
+  width: 200px;
   height: auto;
   border-radius: 5px;
-  margin: 5px;
+  margin: 10px;
 }
 
 #outfit-display, #suggested-outfits {
