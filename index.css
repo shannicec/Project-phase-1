@@ -26,6 +26,7 @@ header h1 {
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 #search-bar {
@@ -46,6 +47,18 @@ header h1 {
 
 #search-button:hover {
   background-color: #ff69b4;
+}
+
+#filter-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#category-filter {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ff1493;
 }
 
 main {
