@@ -7,7 +7,11 @@ const imageGrid = document.getElementById('imageGrid');
 const selectedItems = document.getElementById('selectedItems');
 
 searchButton.addEventListener('click', () => {
-  const query = searchBar.value;
+  const query = searchBar.value.trim();
+  if (query === '') {
+    alert('Please enter a search query.');
+    return;
+  }
   console.log('Search query:', query);
   fetchImages(query);
 });
@@ -15,18 +19,25 @@ searchButton.addEventListener('click', () => {
 async function fetchImages(query) {
   try {
     console.log('Fetching images...');
+    showLoadingState(true);
     const response = await fetch(`${API_URL}?query=${encodeURIComponent(query)}&client_id=${ACCESS_KEY}`);
     console.log('Response received:', response);
     const data = await response.json();
     console.log('Data received:', data);
     displayImages(data.results);
+    showLoadingState(false);
   } catch (error) {
     console.error('Error fetching images:', error);
+    showLoadingState(false);
   }
 }
 
 function displayImages(images) {
   imageGrid.innerHTML = ''; 
+  if (images.length === 0) {
+    imageGrid.innerHTML = '<p>No images found.</p>';
+    return;
+  }
   images.forEach(image => {
     const imgElement = document.createElement('img');
     imgElement.src = image.urls.small;
@@ -46,6 +57,14 @@ function addToOutfit(image) {
 
 function removeFromOutfit(imgElement) {
   selectedItems.removeChild(imgElement);
+}
+
+function showLoadingState(isLoading) {
+  if (isLoading) {
+    imageGrid.innerHTML = '<p>Loading...</p>';
+  } else {
+    imageGrid.innerHTML = '';
+  }
 }
 
 console.log('JavaScript file is loaded');
