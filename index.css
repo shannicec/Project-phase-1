@@ -1,108 +1,69 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, sans-serif;
-  background-color: #ffe4e1;
+  background-color: #f8f8f8;
   color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-  background-color: #ff69b4;
-  padding: 20px;
+  background-color: #fff;
+  padding: 1em;
   text-align: center;
-  color: white;
+  border-bottom: 2px solid #e7e7e7;
 }
 
-header h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-#search-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-#search-bar {
-  width: 50%;
-  padding: 10px;
+header input,
+header button,
+header select {
+  margin: 0.5em;
+  padding: 0.5em;
   border-radius: 5px;
-  border: 1px solid #ff1493;
+  border: 1px solid #ddd;
 }
 
-#search-button {
-  padding: 10px 20px;
+header button {
+  background-color: #f06292;
+  color: white;
   border: none;
-  border-radius: 5px;
-  background-color: #ff1493;
-  color: white;
   cursor: pointer;
 }
 
-#search-button:hover {
-  background-color: #ff69b4;
-}
-
-#filter-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-#category-filter {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ff1493;
+header button:hover {
+  background-color: #c2185b;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  padding: 2em;
 }
 
-#image-gallery, #outfit-display, #suggested-outfits {
-  width: 80%;
-  margin-bottom: 20px;
+#image-gallery,
+#selected-items,
+#suggestions {
+  margin: 1em 0;
 }
 
-#image-gallery img, #suggestions img, #selected-items img {
-  width: 200px;
+#image-gallery .image-container,
+#suggestions img {
+  margin: 0.5em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#image-gallery img,
+#selected-items img,
+#suggestions img {
+  max-width: 100%;
   height: auto;
   border-radius: 5px;
-  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#outfit-display, #suggested-outfits {
-  background-color: #ffb6c1;
-  padding: 15px;
-  border-radius: 10px;
+#selected-items img {
+  width: 150px; /* Adjust size for selected items */
 }
 
-#outfit-display h2, #suggested-outfits h2 {
-  margin-bottom: 15px;
-  color: #ff1493;
-}
-
-#selected-items, #suggestions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #ff69b4;
-  color: white;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
 }
