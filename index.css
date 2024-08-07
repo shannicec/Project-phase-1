@@ -22,11 +22,30 @@ header h1 {
   margin-bottom: 10px;
 }
 
+#search-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 #search-bar {
   width: 50%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ff1493;
+}
+
+#search-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff1493;
+  color: white;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #ff69b4;
 }
 
 main {
