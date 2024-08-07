@@ -9,42 +9,29 @@
 <body>
   <header>
     <h1>Fashion Mixer</h1>
-    <div id="search-container">
-      <input type="text" id="search-bar" placeholder="Search for fashion items...">
-      <button id="search-button">Search</button>
-    </div>
-    <div id="filter-container">
-      <label for="category-filter">Filter by Category:</label>
-      <select id="category-filter">
-        <option value="">All</option>
-        <option value="clothing">Clothing</option>
-        <option value="accessories">Accessories</option>
-        <option value="footwear">Footwear</option>
-      </select>
-    </div>
+    <input id="search-bar" type="text" placeholder="Search for fashion items...">
+    <button id="search-button">Search</button>
+    <select id="category-filter">
+      <option value="">All Categories</option>
+      <option value="dress">Dress</option>
+      <option value="shirt">Shirt</option>
+      <option value="jeans">Jeans</option>
+    </select>
   </header>
-  
+
   <main>
     <section id="image-gallery">
     </section>
 
-    <section id="outfit-display">
+    <section id="selected-items">
       <h2>Your Outfit</h2>
-      <div id="selected-items">
-      </div>
     </section>
 
-    <section id="suggested-outfits">
+    <section id="suggestions">
       <h2>Suggested Outfits</h2>
-      <div id="suggestions">
-      </div>
     </section>
   </main>
-  
-  <footer>
-    <p>© 2024 Fashion Mixer</p>
-  </footer>
-  
+
   <script src="index.js"></script>
 </body>
 </html>
