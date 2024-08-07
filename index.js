@@ -3,6 +3,11 @@ const searchButton = document.getElementById('searchButton');
 const imageGrid = document.getElementById('imageGrid');
 const selectedItems = document.getElementById('selectedItems');
 
+searchButton.addEventListener('click', () => {
+const query = searchBar.value;
+fetchImages(query);
+});
+
 async function fetchImages(query) {
 const ACCESS_KEY = 'cDZNa8MwbJvAT4gJpBjwMswxo2dpc2Q4yEUIo5R30wg';
 const API_URL = 'https://api.unsplash.com/search/photos';
